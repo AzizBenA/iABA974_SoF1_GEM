@@ -1,0 +1,113 @@
+{
+    "metadata": [
+        [
+            8,
+            "Annotated_genome.mdl.gf",
+            "KBaseFBA.FBAModel-15.0",
+            "2024-01-12T14:00:44+0000",
+            1,
+            "ayzou",
+            167506,
+            "ayzou:narrative_1705058190301",
+            "d515f3050a8d0cc0f6a94ebe2b9c2783",
+            1697522,
+            {
+                "Genome": "167506/4/1",
+                "Name": "Unknown species",
+                "Number biomasses": "1",
+                "Number compartments": "2",
+                "Number compounds": "1232",
+                "Number gapfills": "2",
+                "Number gapgens": "0",
+                "Number reactions": "1199",
+                "Source": "",
+                "Source ID": "",
+                "Type": ""
+            }
+        ]
+    ],
+    "provenance": [
+        {
+            "copy_source_inaccessible": 0,
+            "created": "2024-01-12T14:00:44+0000",
+            "creator": "ayzou",
+            "epoch": 1705068044096,
+            "extracted_ids": {},
+            "info": [
+                8,
+                "Annotated_genome.mdl.gf",
+                "KBaseFBA.FBAModel-15.0",
+                "2024-01-12T14:00:44+0000",
+                1,
+                "ayzou",
+                167506,
+                "ayzou:narrative_1705058190301",
+                "d515f3050a8d0cc0f6a94ebe2b9c2783",
+                1697522,
+                {
+                    "Genome": "167506/4/1",
+                    "Name": "Unknown species",
+                    "Number biomasses": "1",
+                    "Number compartments": "2",
+                    "Number compounds": "1232",
+                    "Number gapfills": "2",
+                    "Number gapgens": "0",
+                    "Number reactions": "1199",
+                    "Source": "",
+                    "Source ID": "",
+                    "Type": ""
+                }
+            ],
+            "orig_wsid": 167506,
+            "path": [
+                "167506/8/1"
+            ],
+            "provenance": [
+                {
+                    "custom": {},
+                    "description": "gapfill_metabolic_models",
+                    "external_data": [],
+                    "input_ws_objects": [
+                        "167506/6/1",
+                        "262/536/1",
+                        "12998/20/6",
+                        "12998/21/19"
+                    ],
+                    "intermediate_incoming": [],
+                    "intermediate_outgoing": [],
+                    "method": "gapfill_metabolic_models",
+                    "method_params": [
+                        {
+                            "atp_safe": 1,
+                            "change_to_complete": 0,
+                            "default_objective": "bio1",
+                            "forced_atp_list": [],
+                            "media_list": [],
+                            "minimum_objective": 0.01,
+                            "model_list": [
+                                "167506/6/1"
+                            ],
+                            "reaction_exlusion_list": [],
+                            "source_models": [],
+                            "suffix": ".gf",
+                            "workspace": "ayzou:narrative_1705058190301"
+                        }
+                    ],
+                    "resolved_ws_objects": [
+                        "167506/6/1",
+                        "262/536/1",
+                        "12998/20/6",
+                        "12998/21/19"
+                    ],
+                    "service": "ModelSEEDReconstruction",
+                    "service_ver": "0.1.1.msr",
+                    "subactions": []
+                }
+            ],
+            "refs": [
+                "167506/4/1",
+                "262/536/1"
+            ]
+        }
+    ]
+}
