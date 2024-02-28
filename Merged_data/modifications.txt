@@ -1,0 +1,234 @@
+New gene information provided by EGG_NOG and SEED:
+gene_position: 9905
+gene_product: Peptidase B (EC 3.4.11.23)
+gene_position: 32961
+gene_product: phage-related integrase
+gene_position: 92941
+gene_product: BA14K-like protein
+gene_position: 240043
+gene_product: ATP-dependent helicase HrpB
+gene_position: 257855
+gene_product: Peptidoglycan-binding domain 1
+gene_position: 279423
+gene_product: MaoC domain protein dehydratase
+gene_position: 323263
+gene_product: PRC-barrel domain
+gene_position: 327930
+gene_product: Stress-induced bacterial acidophilic repeat motif
+gene_position: 364499
+gene_product: Flagellar motor rotation protein MotB
+gene_position: 370832
+gene_product: Nitrogen assimilation regulatory protein Nac
+gene_position: 371685
+gene_product: Cytosine deaminase (EC 3.5.4.1)
+gene_position: 371956
+gene_product: Cytosine deaminase (EC 3.5.4.1)
+gene_position: 414470
+gene_product: Beta-hexosaminidase (EC 3.2.1.52)
+gene_position: 527581
+gene_product: Protein of unknown function (DUF502)
+gene_position: 603338
+gene_product: Methylcrotonyl-CoA carboxylase biotin-containing subunit (EC 6.4.1.4)
+gene_position: 605338
+gene_product: Hydroxymethylglutaryl-CoA lyase (EC 4.1.3.4)
+gene_position: 623547
+gene_product: diguanylate cyclase/phosphodiesterase (GGDEF & EAL domains) with PAS/PAC sensor(s)
+gene_position: 792900
+gene_product: Domain of unknown function (DUF4167)
+gene_position: 798944
+gene_product: ATP-dependent protease subunit HslV (EC 3.4.25.2)
+gene_position: 810971
+gene_product: Binding-protein-dependent transport system inner membrane component
+gene_position: 890224
+gene_product: Malate synthase (EC 2.3.3.9)
+gene_position: 1010037
+gene_product: DUF35 OB-fold domain, acyl-CoA-associated
+gene_position: 1083173
+gene_product: Esterase PHB depolymerase
+gene_position: 1128230
+gene_product: Iron-sulfur cluster assembly ATPase protein SufC
+gene_position: 1154663
+gene_product: LRV (FeS)4 cluster domain protein clustered with nitrogenase cofactor synthesis
+gene_position: 1174003
+gene_product: Multicopper oxidase
+gene_position: 1194411
+gene_product: TIGRFAM outer membrane autotransporter barrel domain
+gene_position: 1280558
+gene_product: Predicted regulator PutR for proline utilization, GntR family
+gene_position: 1343593
+gene_product: Protein of unknown function (DUF2385)
+gene_position: 1375186
+gene_product: Periplasmic sensor signal transduction histidine kinase
+gene_position: 1483934
+gene_product: Aldo/keto reductase
+gene_position: 1535406
+gene_product: Alkaline phosphatase (EC 3.1.3.1)
+gene_position: 1564753
+gene_product: diguanylate cyclase/phosphodiesterase (GGDEF & EAL domains) with PAS/PAC sensor(s)
+gene_position: 1600808
+gene_product: extensin-like protein
+gene_position: 1627706
+gene_product: cell septum assembly
+gene_position: 1629451
+gene_product: Uncharacterized protein EC-HemY in Proteobacteria (unrelated to HemY-type PPO in GramPositives)
+gene_position: 1822224
+gene_product: LTXXQ motif family protein
+gene_position: 1864467
+gene_product: Transposase
+gene_position: 1941446
+gene_product: Transcriptional regulator, AcrR family
+gene_position: 2052830
+gene_product: probable exported protein STY0357
+gene_position: 2073846
+gene_product: FOG: TPR repeat, SEL1 subfamily
+gene_position: 2150860
+gene_product: FolM Alternative dihydrofolate reductase 1
+gene_position: 2333474
+gene_product: Glucose-methanol-choline (GMC) oxidoreductase:NAD binding site
+gene_position: 2348499
+gene_product: 3-hydroxyadipyl-CoA dehydrogenase
+gene_position: 2400476
+gene_product: Protein of unknown function (DUF2865)
+gene_position: 2477845
+gene_product: Nitrite reductase [NAD(P)H] large subunit (EC 1.7.1.4)
+gene_position: 2491433
+gene_product: Two-component transcriptional response regulator, LuxR family
+gene_position: 2494426
+gene_product: Transcriptional regulator, LysR family
+gene_position: 2496028
+gene_product: Glycerol-3-phosphate dehydrogenase (EC 1.1.5.3)
+gene_position: 2518000
+gene_product: Transposase
+gene_position: 2646709
+gene_product: 3-ketoacyl-CoA thiolase (EC 2.3.1.16)
+gene_position: 2651060
+gene_product: Acetophenone carboxylase subunit Apc1 (EC 6.4.1.8)
+gene_position: 2700359
+gene_product: diguanylate cyclase/phosphodiesterase (GGDEF & EAL domains) with PAS/PAC sensor(s)
+gene_position: 2709979
+gene_product: TIGRFAM phage portal protein, HK97 family, head morphogenesis protein, SPP1
+gene_position: 2718910
+gene_product: KilA-N
+gene_position: 2721398
+gene_product: Prophage tail length tape measure protein
+gene_position: 2730708
+gene_product: Protein of unknown function (DUF2793)
+gene_position: 2795168
+gene_product: Hemin uptake protein hemP
+gene_position: 2867364
+gene_product: Carbon monoxide oxidation accessory protein CoxD
+gene_position: 2915746
+gene_product: Transcriptional regulator, AsnC family
+gene_position: 2930207
+gene_product: SOS response
+gene_position: 2969858
+gene_product: Protein of unknown function (DUF533)
+gene_position: 3041301
+gene_product: Polyhydroxyalkanoic acid synthase
+gene_position: 3071826
+gene_product: Sporulation related domain
+gene_position: 3110642
+gene_product: Methyltransferase FkbM domain
+gene_position: 3159058
+gene_product: FAD dependent oxidoreductase
+gene_position: 3167424
+gene_product: Protein of unknown function (DUF3300)
+gene_position: 3179260
+gene_product: NADH-ubiquinone oxidoreductase chain J (EC 1.6.5.3)
+gene_position: 3180202
+gene_product: NADH-ubiquinone oxidoreductase chain L (EC 1.6.5.3)
+gene_position: 3209832
+gene_product: Arabinose-binding domain of AraC transcription regulator, N-term
+gene_position: 3212061
+gene_product: HdeA/HdeB family
+gene_position: 3291805
+gene_product: Bacterial SH3 domain
+gene_position: 3430008
+gene_product: Soluble lytic murein transglycosylase (EC 4.2.2.n1)
+gene_position: 3516390
+gene_product: Dipeptide transport system permease protein DppC (TC 3.A.1.5.2)
+gene_position: 3605142
+gene_product: mercury ion transmembrane transporter activity
+gene_position: 3770993
+gene_product: Additional component NikL of nickel ECF transporter
+gene_position: 3774489
+gene_product: Activator of Hsp90 ATPase homolog 1-like protein
+gene_position: 3805152
+gene_product: Enoyl-CoA hydratase (EC 4.2.1.17)
+gene_position: 3823524
+gene_product: Fusaric acid resistance protein family
+gene_position: 3837063
+gene_product: Transposase
+gene_position: 3945458
+gene_product: Protein of unknown function (DUF3300)
+gene_position: 3993685
+gene_product: Biotin carboxylase C-terminal domain
+gene_position: 3995109
+gene_product: Mycolic acid cyclopropane synthetase
+gene_position: 4020292
+gene_product: Membrane alanine aminopeptidase N (EC 3.4.11.2)
+gene_position: 4081920
+gene_product: Thiamin biosynthesis lipoprotein ApbE
+gene_position: 4082479
+gene_product: Thiamin biosynthesis lipoprotein ApbE
+gene_position: 4102076
+gene_product: Aerotolerance protein BatB
+gene_position: 4133384
+gene_product: Integrase
+gene_position: 4145435
+gene_product: CRISPR-associated helicase Cas3
+gene_position: 4208763
+gene_product: COG0500 SAM-dependent methyltransferases
+gene_position: 4277640
+gene_product: 4'-phosphopantetheinyl transferase superfamily
+gene_position: 4278687
+gene_product: Multidrug efflux system MdtABC-TolC, membrane fusion component MdtA
+gene_position: 4354441
+gene_product: Protein of unknown function (DUF3489)
+gene_position: 4424066
+gene_product: Thioesterase
+gene_position: 4478703
+gene_product: UPF0260 protein YcgN
+gene_position: 4557731
+gene_product: Binding-protein-dependent transport system inner membrane component
+gene_position: 4560264
+gene_product: Acyl-CoA dehydrogenase, N-terminal domain
+gene_position: 4573214
+gene_product: Leucine-, isoleucine-, valine-, threonine-, and alanine-binding protein
+gene_position: 4682945
+gene_product: CVNH domain
+gene_position: 4691674
+gene_product: Peptide-methionine (R)-S-oxide reductase MsrB (EC 1.8.4.12)
+gene_position: 4713177
+gene_product: SSU ribosomal protein S6p
+gene_position: 4797098
+gene_product: Enoyl-CoA hydratase (EC 4.2.1.17) => degradation of branched-chain amino acids and alpha-keto acids
+gene_position: 4847793
+gene_product: Phosphoglucosamine mutase (EC 5.4.2.10)
+gene_position: 4885590
+gene_product: AAA+ ATPase superfamily protein YifB/ComM, associated with DNA recombination
+Modified GBFF file "merged_gbff_EC_Protein.gbff" has been created.
+104
+
+Modifications made by prokka databases:
+
+gene_position: 369989
+gene_product: IS3 family transposase ISPmar2
+gene_position: 1151957
+gene_product: FeMo cofactor biosynthesis protein NifB
+gene_position: 1853043
+gene_product: IS3 family transposase ISPmar2
+gene_position: 1926281
+gene_product: IS3 family transposase ISPmar2
+gene_position: 4132592
+gene_product: IS3 family transposase ISPmar2
+gene_position: 4136841
+gene_product: IS3 family transposase ISPmar2
+gene_position: 4485946
+gene_product: IS3 family transposase ISPmar2
+gene_position: 4688286
+gene_product: IS3 family transposase ISPmar2
+gene_position: 4803533
+gene_product: IS3 family transposase ISPmar2
+Modified GBFF file "merged_gbff_EC_Protein_prokka.gbff" has been created.
+9
