@@ -11,7 +11,8 @@ This project is still in progress and will be continually updated.
 
 ## **Updates**
 - Model was mass and charge balanced
-- The growth rate was corrected but the carbon fixation pathways needs investigations
+- The growth rate was corrected
 ## **Remarks**
 - The model is lacking some fatty acid pathways
+- The carbon fixation pathways needs investigations
 - Weird generic reaction are still necessary for the growth rate
