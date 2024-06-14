@@ -12,7 +12,6 @@ The novel food is intended to be used as an ingredient in different food groups.
 ## **Updates**
 - Model was mass and charge balanced
 - The growth rate was corrected
-## **Remarks**
-- The model is lacking some fatty acid pathways
-- The carbon fixation pathways needs investigations
-- Weird generic reaction are still necessary for the growth rate
+- The full calvin cycle was added to the model
+- Other important pathways were also added
+
