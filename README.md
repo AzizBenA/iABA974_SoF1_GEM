@@ -9,8 +9,7 @@ and release specifications. The composition of the novel food has been character
 the safety and long-term stability of the novel food.
 The novel food is intended to be used as an ingredient in different food groups. The novel food is not intended to replace another food but may partially replace the consumption of meat in the non-vegetarian population and the consumption of meat imitates in the vegetarian population. 
 
-## **Updates**
-- The model was adjusted to ensure mass and charge balance.
+## **Updates** (14/06/2024)
 - The growth rate parameter was recalibrated for accuracy.
 - The complete Calvin cycle was integrated into the model.
 - Additional significant metabolic pathways were incorporated.
