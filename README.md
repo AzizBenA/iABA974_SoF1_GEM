@@ -23,7 +23,7 @@ The additional insights gained from these databases significantly improved the s
 
 We drafted a metabolic reconstruction from the annotated Xanthobacter sp. SoF1 genome using CarveMe (Machado et al., 2018), leveraging its top-down reconstruction approach. This methodology commences with a manually curated universal metabolic model, addressing common issues encountered in reconstructions such as missing reactions and incomplete pathways. Unlike traditional bottom-up methods, CarveMe infers an organism's metabolic capabilities solely from genetic evidence, enhancing the efficiency and accuracy of our draft model. Through the 'carving' process, this universal model is tailored to specific organisms, ensuring the preservation of structural properties while streamlining reconstruction. The draft model contained 2258 reactions, 1534 metabolites and 941 metabolic genes.
 
-# Draft Metabolic reconstruction  
+# Manual Curation 
 
 The draft reconstruction obtained a medium MEMOTE score of 67% (Lieven et al., 2020), indicating the need for further refinement. This assessment tool evaluates various parameters, including annotation tests, general quality metrics, and stoichiometric consistencies, in accordance with community standards . The entire model underwent rigorous charge and mass balance curation procedures, resulting in a total of 431 reactions being successfully balanced. This process was accompanied by the removal of exchange reactions that induced unrealistic growth rate. The biomass composition underwent curation based on available experimental data, leading to a significant enhancement in model quality, evidenced by a MEMOTE score of 88%. Nevertheless, further refinement is necessary to incorporate missing pathways in the model.
 
