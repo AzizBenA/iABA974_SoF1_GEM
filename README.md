@@ -9,9 +9,9 @@ and release specifications. The composition of the novel food has been character
 the safety and long-term stability of the novel food.
 The novel food is intended to be used as an ingredient in different food groups. The novel food is not intended to replace another food but may partially replace the consumption of meat in the non-vegetarian population and the consumption of meat imitates in the vegetarian population. 
 
-## **Updates** (23/08/2024)
--NGAM ,GAM and biomass metabolites coefficients updated
-
+## **Updates** (06/12/2024)
+- Set the NGAM value to 11.55 and adjusted the GAM value to get the best fit with experimental data
+- update the biomass component coefficient
 # Annotation 
 Genome annotation serves as a critical initial step in deciphering the genetic blueprint of organisms, providing fundamental insights into gene function and metabolic potential. Our approach to annotating the Xanthobacter sp. SoF1 genome involved a multi-faceted strategy integrating different bioinformatic tools and databases. 
 Annotation tools utilize sequence alignment algorithms to compare genetic sequences with reference databases, predict genes based on features such as open reading frames and splice sites, and assign putative functions to proteins through homology searches and domain predictions. Initially, we used Bakta (Schwengers et al., 2021), a widely used annotation tool, to identify 4520 genes in the genome. Recognizing the complexity of genomic functions, we extended the scope of our analysis to include data from EggNog (Cantalapiedra et al., 2021), RAST (Overbeek et al., 2014) and Prokka (Seemann, 2014).
