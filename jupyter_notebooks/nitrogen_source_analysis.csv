@@ -1,0 +1,6 @@
+Nitrogen Source,Growth (h-1),Yield (g biomass/mmol substrate),H2 uptake flux (mmol substrate/gDW/h),CO2 uptake flux (mmol substrate/gDW/h),O2 uptake flux (mmol substrate/gDW/h)
+EX_nh4_e,0.046199732,0.114318901,19.4,2.206782073,7.324834143
+EX_no3_e,0.040754344,0.114318901,19.4,1.946676979,6.713543539
+EX_no2_e,0.042462393,0.114318901,19.4,2.028263892,6.77409761
+EX_urea_e,0.047770345,0.228637803,19.4,2.072869592,7.139620339
+EX_n2_e,0.042934698,0.228637803,19.4,2.050824073,7.117122635
