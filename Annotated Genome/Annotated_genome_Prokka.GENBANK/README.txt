@@ -1,0 +1,1 @@
+This directory includes the KBase-derived GenBank file and also (if you originally uploaded the genome from an annotated GenBank file) the original GenBank input.
