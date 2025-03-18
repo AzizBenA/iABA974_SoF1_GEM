@@ -9,9 +9,8 @@ and release specifications. The composition of the novel food has been character
 the safety and long-term stability of the novel food.
 The novel food is intended to be used as an ingredient in different food groups. The novel food is not intended to replace another food but may partially replace the consumption of meat in the non-vegetarian population and the consumption of meat imitates in the vegetarian population. 
 
-## **Updates** (08/03/2025)
-- Added all the hydrogenases and nitrogenase to the model
-- Added complex 3 in ETC
+## **Updates** (18/03/2025)
+- Set the final GAM & NGAM from the inhouse algorithm (best combination that matchs the experimental data)
 
 # Annotation 
 Genome annotation serves as a critical initial step in deciphering the genetic blueprint of organisms, providing fundamental insights into gene function and metabolic potential. Our approach to annotating the Xanthobacter sp. SoF1 genome involved a multi-faceted strategy integrating different bioinformatic tools and databases. 
