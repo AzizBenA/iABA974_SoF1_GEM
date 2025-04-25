@@ -16,7 +16,7 @@ def load_model(subfolder, filename):
     model_path = base_dir / subfolder / filename
     return read_sbml_model(str(model_path))
 
-def metabolite_summary_df(model, summary, metabolite):
+def metabolite_summary_df(model, summary, file_path):
     """
     Create a dataframe and an excel file for the metabolite.summary function of cobrapy
 
@@ -46,10 +46,6 @@ def metabolite_summary_df(model, summary, metabolite):
 
     # Add a new column for the reaction formulas
     df_summary_sorted['reaction_formula'] = df_summary_sorted.index.map(lambda x: model.reactions.get_by_id(x).reaction)
-
-    base_dir = Path.home() / "Documents" / "PhD" / "10-19 Research" / "11 Data" / "11.03_Fluxes_values" / "11.03.02_substrate_summary"
-    filename = f"{year}{timestr}_{metabolite.id}_summary.xlsx"
-    file_path = base_dir / filename
 
     return df_summary_sorted.to_excel(file_path, index=False)
 
