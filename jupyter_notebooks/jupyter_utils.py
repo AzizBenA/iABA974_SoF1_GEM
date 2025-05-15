@@ -46,6 +46,7 @@ def metabolite_summary_df(model, summary, file_path):
 
     # Add a new column for the reaction formulas
     df_summary_sorted['reaction_formula'] = df_summary_sorted.index.map(lambda x: model.reactions.get_by_id(x).reaction)
+    df_summary_sorted['reaction_genes'] = df_summary_sorted.index.map(lambda x: [gene.id for gene in model.reactions.get_by_id(x).genes])
 
     return df_summary_sorted.to_excel(file_path, index=False)
 
