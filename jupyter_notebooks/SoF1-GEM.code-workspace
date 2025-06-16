@@ -1,8 +1,10 @@
 {
 	"folders": [
 		{
-			"name": "SoF1-GEM",
 			"path": ".."
+		},
+		{
+			"path": "../../10-19 Research/11 Data/11.12_Visual Code code"
 		}
 	],
 	"settings": {}
