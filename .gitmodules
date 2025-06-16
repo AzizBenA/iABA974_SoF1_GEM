@@ -1,0 +1,3 @@
+[submodule "PAM-parametrizer"]
+	path = PAM-parametrizer
+	url = https://github.com/SamiralVdB/PAM_Parametrization.git
