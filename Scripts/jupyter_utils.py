@@ -10,9 +10,8 @@ import requests
 import time
 
 
-def load_model(subfolder, filename):
+def load_model(base_dir,subfolder, filename):
     """Load an SBML model from a given subfolder and filename."""
-    base_dir = Path.home() / "Documents" / "PhD" / "10-19 Research" / "11 Data" / "11.09_Models"
     model_path = base_dir / subfolder / filename
     return read_sbml_model(str(model_path))
 
