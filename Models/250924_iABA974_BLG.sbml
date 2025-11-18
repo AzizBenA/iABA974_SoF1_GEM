@@ -57845,9 +57845,7 @@
       <parameter sboTerm="SBO:0000626" id="cobra_0_bound" value="0" constant="true"/>
       <parameter sboTerm="SBO:0000626" id="minus_inf" value="-INF" constant="true"/>
       <parameter sboTerm="SBO:0000626" id="plus_inf" value="INF" constant="true"/>
-      <parameter sboTerm="SBO:0000625" id="R_EX_co2_e_lower_bound" value="-2.55543132371561" units="mmol_per_gDW_per_hr" constant="true"/>
-      <parameter sboTerm="SBO:0000625" id="R_EX_h2_e_lower_bound" value="-19.2411627483471" units="mmol_per_gDW_per_hr" constant="true"/>
-      <parameter sboTerm="SBO:0000625" id="R_EX_o2_e_lower_bound" value="-7.07563004902581" units="mmol_per_gDW_per_hr" constant="true"/>
+      <parameter sboTerm="SBO:0000625" id="R_EX_h2_e_lower_bound" value="-19.4" units="mmol_per_gDW_per_hr" constant="true"/>
       <parameter sboTerm="SBO:0000625" id="R_ATPM_lower_bound" value="21.2" units="mmol_per_gDW_per_hr" constant="true"/>
       <parameter sboTerm="SBO:0000625" id="R_Growth_lower_bound" value="0.03" units="mmol_per_gDW_per_hr" constant="true"/>
     </listOfParameters>
@@ -60198,7 +60196,7 @@
           <speciesReference species="M_cm_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
       </reaction>
-      <reaction metaid="meta_R_EX_co2_e" sboTerm="SBO:0000627" id="R_EX_co2_e" name="EX_co2_e" reversible="true" fast="false" fbc:lowerFluxBound="R_EX_co2_e_lower_bound" fbc:upperFluxBound="cobra_0_bound">
+      <reaction metaid="meta_R_EX_co2_e" sboTerm="SBO:0000627" id="R_EX_co2_e" name="EX_co2_e" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_0_bound">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_R_EX_co2_e">
@@ -64445,7 +64443,7 @@
           <speciesReference species="M_novbcn_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
       </reaction>
-      <reaction metaid="meta_R_EX_o2_e" sboTerm="SBO:0000627" id="R_EX_o2_e" name="EX_o2_e" reversible="true" fast="false" fbc:lowerFluxBound="R_EX_o2_e_lower_bound" fbc:upperFluxBound="cobra_0_bound">
+      <reaction metaid="meta_R_EX_o2_e" sboTerm="SBO:0000627" id="R_EX_o2_e" name="EX_o2_e" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_0_bound">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_R_EX_o2_e">
@@ -89803,13 +89801,13 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="M_h_c" stoichiometry="6" constant="true"/>
+          <speciesReference species="M_h_c" stoichiometry="4" constant="true"/>
           <speciesReference species="M_o2_c" stoichiometry="0.5" constant="true"/>
           <speciesReference species="M_q8h2_c" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
           <speciesReference species="M_h2o_c" stoichiometry="1" constant="true"/>
-          <speciesReference species="M_h_p" stoichiometry="6" constant="true"/>
+          <speciesReference species="M_h_p" stoichiometry="4" constant="true"/>
           <speciesReference species="M_q8_c" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <fbc:geneProductAssociation>
@@ -159660,7 +159658,6 @@
       <fbc:objective fbc:id="obj" fbc:type="maximize">
         <fbc:listOfFluxObjectives>
           <fbc:fluxObjective fbc:reaction="R_Growth" fbc:coefficient="1"/>
-          <fbc:fluxObjective fbc:reaction="R_BLG_x1_production" fbc:coefficient="0.1"/>
         </fbc:listOfFluxObjectives>
       </fbc:objective>
     </fbc:listOfObjectives>
