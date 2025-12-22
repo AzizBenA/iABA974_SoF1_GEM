@@ -106739,7 +106739,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_AAFOLC_05725"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="meta_R_CYTHYD" id="R_CYTHYD" name="cytochrome-c3 hydrogenase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="meta_R_CYTHYD" id="R_CYTHYD" name="cytochrome-c3 hydrogenase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_R_CYTHYD">
@@ -106758,7 +106758,7 @@
         </listOfReactants>
         <listOfProducts>
           <speciesReference species="M_focytc_c" stoichiometry="2" constant="true"/>
-          <speciesReference species="M_h_c" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_h_p" stoichiometry="2" constant="true"/>
         </listOfProducts>
         <fbc:geneProductAssociation>
           <fbc:and>
