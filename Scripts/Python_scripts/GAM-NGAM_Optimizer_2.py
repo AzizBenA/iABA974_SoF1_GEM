@@ -6,7 +6,7 @@ from cobra.io import read_sbml_model
 from sklearn.metrics import r2_score
 
 
-# this version is the  update by CHATGPT it also include r2 score for the substrate uptakes and uses the while Model when changing the GAM .
+# this version is the update by CHATGPT it also include r2 score for the substrate uptakes and uses the while Model when changing the GAM .
 
 
 
