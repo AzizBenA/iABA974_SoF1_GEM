@@ -1,0 +1,6 @@
+{
+    "cSpell.enabled": true,
+    
+
+    "github.copilot.chat.commitMessageGeneration.instructions":[{"file":".github/copilot-instructions.md"}]
+}
