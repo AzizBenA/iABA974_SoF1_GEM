@@ -8,7 +8,7 @@ from sklearn.metrics import r2_score
 # ----------------------------
 # 1) Load production envelope (this comes from the build in fuction of cobrapy)
 # ----------------------------
-envelope_path = "Results/PhPP/production_envelope_PAM_co2_o2.csv"  
+envelope_path = "Results/PhPP/production_envelope_basemodel_h2_o2.csv"  
 df = pd.read_csv(envelope_path)
 
 # Pick the 2 axes (these are the two varied reactions in your CSV)
@@ -38,15 +38,21 @@ df_feas = df.dropna(subset=["x_plot", "y_plot", obj_col]).copy()
 # A common definition in a 2D envelope grid:
 # For each x value, pick the y giving the maximum objective (flux_maximum).
 # (You can also do it per y, depending on how you define optimality.)
-df_feas["x_round"] = df_feas["x_plot"].round(10)  # stabilize grouping if float noise
-
+df_feas["x_round"] = df_feas["x_plot"].round(10)
+df_feas["obj_round"] = df_feas[obj_col].round(5)
 opt_points = (
-    df_feas.sort_values(obj_col, ascending=False)
-           .groupby("x_round", as_index=False)
-           .first()
-           .sort_values("x_round")
+    df_feas
+      # compute the max growth at each x
+      .assign(max_obj=df_feas.groupby("x_round")["obj_round"].transform("max"))
+      # keep only rows that achieve that max (ties allowed)
+      .query(f"obj_round == max_obj")
+      # among ties, pick the lowest O2 uptake (smallest y_plot)
+      .sort_values(["x_round", "y_plot"], ascending=[True, True])
+      .groupby("x_round", as_index=False)
+      .first()
+      .sort_values("x_round")
 )
-
+print(opt_points)
 x_opt = opt_points["x_plot"].to_numpy()
 y_opt = opt_points["y_plot"].to_numpy()
 
@@ -131,7 +137,7 @@ ax.set_title("2D Production Envelope with Optimality Line + Experimental Fit")
 ax.legend()
 ax.grid(True, alpha=0.25)
 
-plt.savefig(f"Results/PhPP/{x_col}_{y_col}_PhPP_2d.png")
+plt.savefig(f"Results/PhPP/{x_col}_{y_col}_PhPP_2d_GEM.png")
 plt.tight_layout()
 plt.show()
 
