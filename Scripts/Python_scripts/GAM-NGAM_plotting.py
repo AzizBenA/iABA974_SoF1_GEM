@@ -60,14 +60,13 @@ def change_atp_maintenance(model: Union[Model, PAModel],
 
 if __name__ == '__main__':
 
-    ENERGY_FIG_FILE = ('../Results/effect_of_energy_requirements_H2_2.png')
+    ENERGY_FIG_FILE = ('Results/NGAM_GAM_optimizer/effect_of_energy_requirements_H2_2.png')
 
     # ---------- Load one GEM ----------
-    model = ju.load_model(base_dir,"Models", "250808_iABA974.sbml")
-    model_1 = ju.load_model(base_dir,"Models", "251226_iABA974_updated_ETC.sbml")
+    
+    model = read_sbml_model(os.path.join("Models", "250808_iABA974.sbml"))
     model_id = "iABA974"
     model.reactions.get_by_id('ATPM').bounds = -1000.0 , 1000.0 # initilize the ATPM bounds to avoid infeasible solution in the first itteration
-    model_1.reactions.get_by_id('ATPM').bounds = -1000.0 , 1000.0 # initilize the ATPM bounds to avoid infeasible solution in the first itteration
 
     m_to_coeff = {
             model.metabolites.atp_c: 0.0,
@@ -76,7 +75,7 @@ if __name__ == '__main__':
     model.reactions.get_by_id("Growth").add_metabolites(m_to_coeff, combine=True)
     print(f"Changing GAM to {0.0} mmol_ATP/gCDW")
     # ---------- Experimental data ----------
-    chemostat = pd.read_excel('../Data/240716_exp_gas_consumption.xlsx')
+    chemostat = pd.read_excel('Data/240716_exp_gas_grouped.xlsx')
 
     # Choose the experimental columns you want to compare against
     # IMPORTANT: Replace these with your real column names in the Excel file.
@@ -113,8 +112,8 @@ if __name__ == '__main__':
     model.objective = "Growth"
 
     # baseline model (no changes)
-    p0 = pickle.dumps(model)
-    fluxes_base = get_model_fluxes(substrate_rates=substrate_rates, model=pickle.loads(p0), h2_ex_id="EX_h2_e")
+    # p0 = pickle.dumps(model)
+    # fluxes_base = get_model_fluxes(substrate_rates=substrate_rates, model=pickle.loads(p0), h2_ex_id="EX_h2_e")
 
 
     # build flux lists per condition using fresh copies (avoid accumulating GAM edits)
@@ -132,18 +131,12 @@ if __name__ == '__main__':
         labels.append(f"{model_id}  GAM={gam:.3g}, NGAM={ngam:.3g}")
         print(f"for the GAM {gam} and NGAM {ngam} the analysis was done")
 
-    # include baseline if you want it
-    flux_lists = [fluxes_base] + flux_lists
-    labels = [f"{model_id} Draft"] + labels
-    colors = ["k"] + colors
+    # # include baseline if you want it
+    # flux_lists = [fluxes_base] + flux_lists
+    # labels = [f"{model_id} Draft"] + labels
+    # colors = ["k"] + colors
 
-    # simulation of the ETC updated model
-    p1 = pickle.dumps(model_1)
-    m_1 = change_atp_maintenance(model=pickle.loads(p), ngam=13.65, gam=10.0, biomass_rxn_id="Growth")
-    flux_1 = get_model_fluxes(substrate_rates=substrate_rates, model=m_1, h2_ex_id="EX_h2_e")
-    flux_lists = [flux_1] + flux_lists
-    labels = [f"ETC updated model "] + labels
-    colors = ["k"] + colors
+
     # what to plot in each panel (rxn_id, exp_column)
     panel_specs = [
         ("EX_o2_e",  exp_cols["EX_o2_e"]),
