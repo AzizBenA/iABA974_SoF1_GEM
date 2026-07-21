@@ -807,3 +807,16 @@ def export_metabolites_from_reaction(model, reaction_id, file_path):
     
     except KeyError:
         print(f"Reaction '{reaction_id}' not found in the model.")
+
+
+def get_active_reactions(model, solution):
+
+    # Create a list to store active reactions
+    active_reactions = []
+
+    for rxn in model.reactions:
+        if solution.fluxes[rxn.id] != 0:
+            active_reactions.append([rxn.name, rxn.id, solution.fluxes[rxn.id]])
+
+    df_active_rxn = pd.DataFrame(active_reactions, columns=['Reaction Name', 'Reaction ID',  'Flux Value'])
+    return df_active_rxn
