@@ -30,10 +30,10 @@ plt.rcParams.update({
 # ----------------------------
 # Load model data
 # ----------------------------
-df_phpp = pd.read_csv("Results/PhPP/production_envelope_basemodel_h2_o2.csv")
+df_phpp = pd.read_csv("Results/PhPP/production_envelope_basemodel_co2_o2.csv")
 
 growth_col = "flux_maximum"
-y_col = "EX_h2_e"
+y_col = "EX_co2_e"
 x_col = "EX_o2_e"
 
 # ----------------------------
@@ -48,7 +48,7 @@ exp = exp_raw[["dilRate", "H2 Flux theoretic", "O2 flux theoretic", "CO2 flux th
 # ----------------------------
 # Convert model uptake to positive values for plotting
 # ----------------------------
-df_phpp["x_plot"] = -df_phpp["EX_h2_e"].astype(float)   # H2 uptake
+df_phpp["x_plot"] = -df_phpp["EX_co2_e"].astype(float)   # CO2 uptake
 df_phpp["y_plot"] = -df_phpp["EX_o2_e"].astype(float)   # O2 uptake
 
 df_feas = df_phpp.dropna(subset=["x_plot", "y_plot", growth_col]).copy()
@@ -70,12 +70,12 @@ def calculate_standard_error_for_plotting(exp_grouped):
     # Calculate standard error for each column
     # Experimental x/y for plotting
     x_col_exp = "O2 flux theoretic"
-    y_col_exp = "H2 Flux theoretic"
+    y_col_exp = "CO2 flux theoretic"
 
     exp_x = exp_grouped[x_col_exp].astype(float).to_numpy()
     exp_y = exp_grouped[y_col_exp].astype(float).to_numpy()
     exp_xerr = exp_grouped["o2_std"].astype(float).to_numpy()
-    exp_yerr = exp_grouped["h2_std"].astype(float).to_numpy()
+    exp_yerr = exp_grouped["co2_std"].astype(float).to_numpy()
 
     return exp_x, exp_y, exp_xerr, exp_yerr
 
@@ -206,7 +206,7 @@ ax.tick_params(which="minor", length=0)   # no visible tick marks, just gridline
 # ----------------------------
 row_has_data = ~np.isnan(Z).all(axis=1)   # True for rows with at least one valid cell
 first_row = np.argmax(row_has_data)        # index of first data-containing row
-ax.set_ylim(Y_edges[first_row],20)
+ax.set_ylim(Y_edges[first_row],2.1)
 
 
 # Line of optimality
@@ -264,7 +264,7 @@ cbar.outline.set_linewidth(0.6)
 
 # Labels
 ax.set_xlabel(r"O$_2$ uptake rate (mmol gDW$^{-1}$ h$^{-1}$)", labelpad=6)
-ax.set_ylabel(r"H$_2$ uptake rate (mmol gDW$^{-1}$ h$^{-1}$)", labelpad=6)
+ax.set_ylabel(r"CO$_2$ uptake rate (mmol gDW$^{-1}$ h$^{-1}$)", labelpad=6)
 
 # Closed frame: keep all four spines, uniform weight
 for spine in ax.spines.values():
@@ -275,9 +275,9 @@ ax.tick_params(direction="out", length=3.5, width=0.5, top=False, right=False)
 
 annotation = (
     r"$\mathbf{Line\ of\ optimality}$" + "\n"
-    rf"H$_2$ = {m_opt:.2f}$\cdot$O$_2$ {b_opt:+.2f}" + "\n\n"
+    rf"CO$_2$ = {m_opt:.2f}$\cdot$O$_2$ {b_opt:+.2f}" + "\n\n"
     r"$\mathbf{Experimental\ fit}$" + "\n"
-    rf"H$_2$ = {m_exp:.2f}$\cdot$O$_2$ {b_exp:+.2f}" + "\n"
+    rf"CO$_2$ = {m_exp:.2f}$\cdot$O$_2$ {b_exp:+.2f}" + "\n"
     rf"$R^2$ = {r2_exp_fit:.2f}"
 )
 
