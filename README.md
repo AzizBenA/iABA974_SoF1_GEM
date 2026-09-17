@@ -12,7 +12,7 @@ The reconstruction followed five main stages:
 4. **Calibration and validation.** ATP maintenance requirements were calibrated against chemostat measurements, and carbon-source growth predictions were evaluated using Biolog phenotype data. MEMOTE reports document model quality at successive reconstruction stages.
 5. **Protein allocation.** Enzyme turnover numbers, protein masses, and active, translational, and unused protein sectors were integrated into a PAM to investigate metabolic capacity and growth limitations.
 
-The repository supports flux balance and variability analysis, gene deletion studies, gas-uptake phenotype phase planes, and recombinant protein production analyses. The manuscript identifies respiratory efficiency and absolute gas-uptake predictions as areas for further refinement.
+The repository supports flux balance and variability analysis, gene deletion studies, gas-uptake phenotype phase planes, and recombinant protein production analyses. Respiratory efficiency and absolute gas-uptake predictions remain areas for further refinement.
 
 ## Models
 
@@ -23,7 +23,7 @@ Models are provided in SBML format with gene-protein-reaction associations and c
 | `260302_iABA974.sbml` | Most recent dated base-model snapshot | 2,389 | 1,614 | 974 |
 | `250924_iABA974_BLG.sbml` | Beta-lactoglobulin production variant | 2,392 | 1,616 | 974 |
 
-Counts above were checked directly against the SBML files. The totals in the manuscript's Table 2 match the BLG variant; archived snapshots can differ. Earlier models and reaction/metabolite spreadsheets retain the reconstruction's development record.
+Counts above were checked directly against the SBML files. Counts can differ between model variants and archived snapshots. Earlier models and reaction/metabolite spreadsheets retain the reconstruction's development record.
 
 ## Repository structure
 
@@ -58,4 +58,6 @@ print("Solver status:", solution.status)
 print("Objective value:", solution.objective_value)
 ```
 
-For a specific growth experiment, configure the medium, gas uptake bounds, and ATP maintenance parameters before interpreting the prediction. The stored model is a starting point; this example does not reproduce the manuscript's calibrated experiments.
+For a specific growth experiment, configure the medium, gas uptake bounds, and ATP maintenance parameters before interpreting the prediction. The stored model provides a starting point for configuring condition-specific simulations.
+
+This work is under review at mSystems.
