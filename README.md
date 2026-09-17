@@ -1,34 +1,61 @@
-## **Important**
-This project is still in progress and will be continually updated.
+# iABA974: genome-scale metabolic model of *Xanthobacter* sp. SoF1
 
-# Genome scale metabolic model of *Xanthobacter sp. SoF1*
+iABA974 is a manually curated genome-scale metabolic reconstruction of the hydrogen-oxidizing bacterium *Xanthobacter* sp. SoF1. It provides a framework for studying growth on CO2 and H2, energy metabolism, carbon-source utilization, and the metabolic demands of recombinant protein production. A protein allocation model (PAM) extends the reconstruction with enzyme capacity and proteome allocation constraints.
 
-The novel food, which is subject to the present novel food application, and has been submitted in accordance with Regulation (EU) 2015/2283, is a microbial protein-rich powder comprised of biomass of inactivated bacterial cells of a non-genetically modified strain of *Xanthobacter sp.*
-The production of the novel food is based on the cultivation of *Xanthobacter sp. SoF1* in a continuous bioprocess. It is well characterized and carefully monitored. Quality assurance programs have been established to ensure the product meets HACCP (Hazard Analysis and Critical Control Points) principles
-and release specifications. The composition of the novel food has been characterized and product specifications have been established. Detailed physical, chemical, and microbiological product analysis, as well as stability tests show
-the safety and long-term stability of the novel food.
-The novel food is intended to be used as an ingredient in different food groups. The novel food is not intended to replace another food but may partially replace the consumption of meat in the non-vegetarian population and the consumption of meat imitates in the vegetarian population. 
+## Reconstruction
 
+The reconstruction followed five main stages, described in the manuscript `260728__SoF1_GEM_corrected.pdf`:
 
-# Annotation 
-Genome annotation serves as a critical initial step in deciphering the genetic blueprint of organisms, providing fundamental insights into gene function and metabolic potential. Our approach to annotating the Xanthobacter sp. SoF1 genome involved a multi-faceted strategy integrating different bioinformatic tools and databases. 
-Annotation tools utilize sequence alignment algorithms to compare genetic sequences with reference databases, predict genes based on features such as open reading frames and splice sites, and assign putative functions to proteins through homology searches and domain predictions. Initially, we used Bakta (Schwengers et al., 2021), a widely used annotation tool, to identify 4520 genes in the genome. Recognizing the complexity of genomic functions, we extended the scope of our analysis to include data from EggNog (Cantalapiedra et al., 2021), RAST (Overbeek et al., 2014) and Prokka (Seemann, 2014).
-The additional insights gained from these databases significantly improved the scope and accuracy of our annotation. Specifically, we identified 113 previously unrecognized gene functions. To further enrich our annotation, we used a machine learning tool called DeepEC Transformer. This allowed predicting 824 new EC numbers, critical for elucidating enzyme functions and pathways. By integrating the data of DeepEC Transformer, we strengthened our annotation and ensured a more nuanced representation of the metabolic potential of Xanthobacter sp. SoF1.
+1. **Genome annotation.** Bakta, eggNOG, RAST, and Prokka annotations were combined with DeepEC Transformer predictions to improve functional assignments and enzyme coverage.
+2. **Draft reconstruction.** CarveMe generated an initial network containing 2,258 reactions and 1,534 metabolites.
+3. **Manual curation.** Gene associations, reaction stoichiometry, and mass and charge balance were reviewed. Curation addressed the Calvin cycle, hydrogen oxidation and the electron transport chain, and pathways supplying biomass precursors. Unsupported exchange reactions were removed, and the biomass equation incorporated measured SoF1 composition and reference-model information.
+4. **Calibration and validation.** ATP maintenance requirements were calibrated against chemostat measurements, and carbon-source growth predictions were evaluated using Biolog phenotype data. MEMOTE reports document model quality at successive reconstruction stages.
+5. **Protein allocation.** Enzyme turnover numbers, protein masses, and active, translational, and unused protein sectors were integrated into a PAM to investigate metabolic capacity and growth limitations.
 
-# Draft Metabolic Reconstruction  
+The repository supports flux balance and variability analysis, gene deletion studies, gas-uptake phenotype phase planes, and recombinant protein production analyses. The manuscript identifies respiratory efficiency and absolute gas-uptake predictions as areas for further refinement.
 
-We drafted a metabolic reconstruction from the annotated Xanthobacter sp. SoF1 genome using CarveMe (Machado et al., 2018), leveraging its top-down reconstruction approach. This methodology commences with a manually curated universal metabolic model, addressing common issues encountered in reconstructions such as missing reactions and incomplete pathways. Unlike traditional bottom-up methods, CarveMe infers an organism's metabolic capabilities solely from genetic evidence, enhancing the efficiency and accuracy of our draft model. Through the 'carving' process, this universal model is tailored to specific organisms, ensuring the preservation of structural properties while streamlining reconstruction. The draft model contained 2258 reactions, 1534 metabolites and 941 metabolic genes.
+## Models
 
-# Manual Curation 
+Models are provided in SBML format with gene-protein-reaction associations and cytosolic, periplasmic, and extracellular compartments.
 
-The draft reconstruction obtained a medium MEMOTE score of 67% (Lieven et al., 2020), indicating the need for further refinement. This assessment tool evaluates various parameters, including annotation tests, general quality metrics, and stoichiometric consistencies, in accordance with community standards . The entire model underwent rigorous charge and mass balance curation procedures, resulting in a total of 431 reactions being successfully balanced. This process was accompanied by the removal of exchange reactions that induced unrealistic growth rate. For the gap-filling process, we used the experimental biomass equation as a foundational reference, integrating components from the biomass equation of Pseudomonas putida KT2440 model (Nogales et al., 2020). This model was chosen due to its comprehensive nature and similarity to our strain. Following the methodologies outlined by (Feist and Palsson, 2010), we aimed to construct a detailed biomass objective function to guide the gap-filling process, essential for accurately modeling growth rates and metabolic activity.
+| File in `Models/` | Description | Reactions | Metabolites | Genes |
+| --- | --- | ---: | ---: | ---: |
+| `260302_iABA974.sbml` | Most recent dated base-model snapshot | 2,389 | 1,614 | 974 |
+| `250924_iABA974_BLG.sbml` | Beta-lactoglobulin production variant | 2,392 | 1,616 | 974 |
 
-Our initial approach focused on identifying and filling gaps in key metabolic pathways necessary for accurate growth predictions. The Calvin cycle, critical for carbon fixation, required the addition of specific reactions such as Sedoheptulose-bisphosphatase (SBP), Phosphoribulokinase (PRUK), and Ribulose-bisphosphate carboxylase (RBPC). These reactions were vital for completing the Calvin cycle, enabling efficient CO2 conversion. Their inclusion was supported by genetic evidence from genome annotation. We implemented a scoring system to evaluate the level of evidence for each reaction, ranging from 1 (generic reactions for completeness) to 4 (reactions with strong experimental support).
-All reaction data were sourced from the KEGG database, using *Xanthobacter autotrophicus* as a reference organism, as confirmed by pan-genomic analysis. Initially, the model successfully demonstrated growth on substrates such as ethanol, gluconate, acetate, and succinate without requiring additional refinement.
+Counts above were checked directly against the SBML files. The totals in the manuscript's Table 2 match the BLG variant; archived snapshots can differ. Earlier models and reaction/metabolite spreadsheets retain the reconstruction's development record.
 
-Fatty acid metabolism posed specific challenges, requiring additional reactions for protonation to incorporate these acids into the biomass composition. Hexadecanoic and hexadecenoic acids needed protonation reactions (PROHEXADECA, PROHEXADECE), as did octadecanoic and octadecenoic acids (PROOCTADECA, PROOCTADECE). We constrained reactions like FAS180 to prevent the conversion of malonyl-CoA to octadecanoate, based on genetic evidence favoring conversion to octadecenoate. Completing linoleic acid metabolism involved adding reactions for unsaturated fatty acids, such as NADPH-dependent stearoyl-CoA 9-desaturase (STEA_9_DESA) and Δ12-Desaturation of Oleoyl-CoA (OLEO_12_DESA). Gamma-linolenic metabolism was also addressed with Δ6-Desaturation of Linoleoyl-CoA (LINO_6_DESA) and Gamma-Linolenoyl-CoA hydrolase (FACOAE1836Z9Z12Z), although these reactions currently lack genetic evidence.
+## Repository structure
 
-To ensure comprehensive metabolic coverage, we expanded carbohydrate metabolism pathways. Galactose metabolism was completed with Galactokinase (GALKr), xylose metabolism with Xylose isomerase (XYLI1), arabinose metabolism with L-ribulokinase (RBK_L1) and L-arabinose isomerase (ARAI), and mannose metabolism with GDP-mannose mannosyl hydrolase (GDPMNH). For vitamin metabolism, the adenosylcobalamin pathway was completed with reactions such as Adenosyl cobinamide phosphate guanyltransferase (ACBIPGT) and Adenosylcobalamin 5'-phosphate synthase (ADOCBLS), although some metabolites still require addition for broader coverage.
+| Path | Contents |
+| --- | --- |
+| [`Models/`](Models/) | Draft and curated SBML models, production variants, and model information spreadsheets. |
+| [`data/PAM_data/`](data/PAM_data/) | Enzyme parameter workbooks for protein allocation modeling. |
+| [`data/Escher_data/`](data/Escher_data/) | Escher pathway maps, a JSON model, and flux overlays. |
+| [`Scripts/`](Scripts/) | Jupyter notebooks for model curation, FVA, strain design, PAM parametrization, and visualization; shared utilities in `jupyter_utils.py` and `model_utils.py`. |
+| [`Scripts/Python_scripts/`](Scripts/Python_scripts/) | Scripts for maintenance-energy optimization, phase-plane analysis, PAM construction, and annotation processing. |
+| [`Results/`](Results/) | Saved simulation tables and figures, including FVA, gene knockouts, maintenance fitting, and phenotype phase planes. |
+| [`Memote/`](Memote/) | Archived HTML model-quality reports. |
 
+The `data/` folder retains only PAM and Escher resources. Experimental measurements and annotation datasets have been removed from this folder. Historical notebooks that load those inputs require them to be supplied separately. Some scripts also contain machine-specific paths or use `Data/` instead of `data/`; adjust these before running, particularly on case-sensitive systems. PAM workflows additionally require PAModelpy and, for parameter fitting, PAMparametrizer.
 
+## Quick start
 
+Install COBRApy in your Python environment:
+
+```bash
+python -m pip install cobra
+```
+
+From the repository root, load the base model and solve it using its stored objective and constraints:
+
+```python
+from cobra.io import read_sbml_model
+
+model = read_sbml_model("Models/260302_iABA974.sbml")
+solution = model.optimize()
+print("Solver status:", solution.status)
+print("Objective value:", solution.objective_value)
+```
+
+For a specific growth experiment, configure the medium, gas uptake bounds, and ATP maintenance parameters before interpreting the prediction. The stored model is a starting point; this example does not reproduce the manuscript's calibrated experiments.
