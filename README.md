@@ -4,7 +4,7 @@ iABA974 is a manually curated genome-scale metabolic reconstruction of the hydro
 
 ## Reconstruction
 
-The reconstruction followed five main stages, described in the manuscript `260728__SoF1_GEM_corrected.pdf`:
+The reconstruction followed five main stages:
 
 1. **Genome annotation.** Bakta, eggNOG, RAST, and Prokka annotations were combined with DeepEC Transformer predictions to improve functional assignments and enzyme coverage.
 2. **Draft reconstruction.** CarveMe generated an initial network containing 2,258 reactions and 1,534 metabolites.
